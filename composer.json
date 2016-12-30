@@ -23,5 +23,6 @@
         "psr-4": {
             "Rymanalu\\Http\\": "src/"
         }
-    }
+    },
+    "homepage": "https://github.com/rymanalu/http"
 }
