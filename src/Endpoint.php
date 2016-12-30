@@ -78,4 +78,17 @@ abstract class Endpoint implements EndpointContract
     {
         return trim($string, '/');
     }
+
+    /**
+     * Add additional options.
+     *
+     * @param  array  $options
+     * @return \Rymanalu\Http\Contracts\Endpoint
+     */
+    public function addOptions(array $options)
+    {
+        $this->options = array_merge($this->options, $options);
+
+        return $this;
+    }
 }

@@ -44,6 +44,18 @@ class EndpointTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals($options, $endpoint->options());
     }
+
+    /** @test */
+    public function it_can_add_additional_options()
+    {
+        $options = ['foo' => 'bar'];
+        $endpoint = new ExampleEndpoint($options);
+        $additionalOptions = ['bar' => 'foo'];
+
+        $this->assertEquals(
+            array_merge($options, $additionalOptions), $endpoint->addOptions($additionalOptions)->options()
+        );
+    }
 }
 
 class EmptyEndpointStub extends Endpoint

@@ -24,4 +24,12 @@ interface Endpoint
      * @return array
      */
     public function options();
+
+    /**
+     * Add additional options.
+     *
+     * @param  array  $options
+     * @return \Rymanalu\Http\Contracts\Endpoint
+     */
+    public function addOptions(array $options);
 }
