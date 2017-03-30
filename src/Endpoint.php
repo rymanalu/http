@@ -25,7 +25,7 @@ abstract class Endpoint implements EndpointContract
      *
      * @var array
      */
-    protected $options;
+    protected $options = [];
 
     /**
      * Create a new Endpoint instance.
@@ -35,7 +35,7 @@ abstract class Endpoint implements EndpointContract
      */
     public function __construct(array $options = [])
     {
-        $this->options = $options;
+        $this->addOptions($options);
     }
 
     /**
